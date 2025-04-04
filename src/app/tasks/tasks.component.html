@@ -1,0 +1,12 @@
+<div class="mx-4 flex flex-wrap justify-between">
+    <div class="m-4">{{selectedUser()}}</div>
+    <button class={{addTaskCssString}}
+    (click)="onClickTask()">Add Tasks</button>
+</div>
+<div>
+    <app-task [tasks]="this.tasks()"></app-task>
+</div>
+
+@if(this.isDialogOpen()) {
+    <app-new-task (addTask) = "onAddTask($event)"></app-new-task>
+}

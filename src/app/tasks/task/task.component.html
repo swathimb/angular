@@ -1,0 +1,11 @@
+<div class="w-1/2">
+    <ul class="">
+        <!-- new syntax for for -->
+        @for(task of this.tasks(); track $index) {
+            <div class="border">
+                <p>Title: {{task.title}}</p>
+                <p>Summary: {{task.summary}}</p>
+            </div>
+        }
+    </ul>
+</div>
