@@ -15,6 +15,9 @@ export class TasksComponent {
   addTaskCssString = "m-4 p-2 rounded-md bg-indigo-300 shadow-lg shadow-indigo-500/50 hover:bg-indigo-500"
   selectedUser = input<string| null>(); //InputSignals
   isDialogOpen = signal(false);
+
+  userId = input<string>(); // router Input Binding
+
   tasks = signal<{title: string, summary: string}[]>([{
     title: "Task 1",
     summary: "Learn Angular"
